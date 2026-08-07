@@ -155,10 +155,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---- SMOOTH PARALLAX ON HERO ----
-  const heroBg = document.querySelector('.hero-bg-img');
+  const heroBg = document.getElementById('heroBgSlider') || document.querySelector('.hero-bg-img');
   if (heroBg) {
     window.addEventListener('scroll', () => {
-      heroBg.style.transform = `scale(1.05) translateY(${window.scrollY * 0.25}px)`;
+      heroBg.style.transform = `translateY(${window.scrollY * 0.25}px)`;
     }, { passive: true });
   }
 
